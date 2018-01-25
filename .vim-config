@@ -120,13 +120,6 @@ autocmd BufEnter *.html setlocal shiftwidth=2 softtabstop=2 tabstop=2
 autocmd BufEnter *.php setlocal shiftwidth=2 softtabstop=2 tabstop=2
 autocmd BufEnter *.js setlocal shiftwidth=2 softtabstop=2 tabstop=2
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Keyboard bindings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

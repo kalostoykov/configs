@@ -7,20 +7,14 @@ call plug#begin('~/.vim/plugged')
 " Initialize plugin system
 "
 " color schemas
-Plug 'tpope/vim-vividchalk'
-Plug 'altercation/vim-colors-solarized'
 Plug 'sjl/badwolf'
 
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'tomtom/tcomment_vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'itchyny/lightline.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'godlygeek/tabular'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'vim-scripts/indentpython'
 Plug 'airblade/vim-gitgutter'
@@ -28,11 +22,10 @@ Plug 'vim-scripts/simple-pairs'
 
 " Syntax checkers
 Plug 'vim-syntastic/syntastic'
-Plug 'nvie/vim-flake8'
 
 " Completion, Snippets
 Plug 'valloric/youcompleteme'
-Plug  'ervandew/supertab'
+Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 call plug#end()
