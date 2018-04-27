@@ -21,6 +21,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/simple-pairs'
 
 " Syntax checkers
+Plug 'nvie/vim-flake8'
 Plug 'vim-syntastic/syntastic'
 
 " Completion, Snippets
@@ -30,7 +31,9 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 call plug#end()
 
+let mapleader = ','
 
+runtime macros/matchit.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Load vim config and keybindings files
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,20 +54,7 @@ set directory=~/.vim/tmp/                   " for the swap files
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " reloads .vimrc -- making all changes active
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ','
 map <silent> <Leader>v :source ~/.vimrc<CR>:PlugInstall<CR>:bdelete<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Lightline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:lightline = { 'colorscheme': 'solarized', }               "vim-lightline
-set laststatus=2                                                "vim-lightline
-set noshowmode                                                  "vim-lightline
-
-let g:syntastic_always_populate_loc_list = 1                    "syntastic
-let g:syntastic_auto_loc_list = 1                               "syntastic
-let g:syntastic_check_on_open = 1                               "syntastic
-let g:syntastic_check_on_wq = 0                                 "syntastic
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " How 'invisible' characted are displayed
@@ -102,4 +92,3 @@ function! NumberToggle()
 endfunction
 
 nnoremap <silent> <F3> :call NumberToggle()<CR>
-
