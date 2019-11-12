@@ -48,11 +48,26 @@ source ~/.vim/.vim-keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color scheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set t_Co=256   " This is may or may not needed.
+" Enable syntax highlighting
+syntax enable
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Linebreak on 500 characters
+set lbr
+set tw=81
+
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+set colorcolumn=80
+
+set t_Co=256
 
 set background=light
 colorscheme PaperColor
-" color dracula
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " don't create swap files
