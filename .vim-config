@@ -77,92 +77,43 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Enable syntax highlighting
-syntax enable
 
-" Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-
-set background=dark
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
-" Linebreak on 500 characters
-set lbr
-set tw=81
-
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
-set colorcolumn=80
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"" Tab characters = 4-spaces-wide
+" Tab characters = 4-spaces-wide
 set modeline
 set tabstop=4
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 
-"" Tab characters = 2-spaces-wide for HTML, JS files
-autocmd BufEnter *.html setlocal shiftwidth=2 softtabstop=2 tabstop=2
-autocmd BufEnter *.php setlocal shiftwidth=2 softtabstop=2 tabstop=2
-autocmd BufEnter *.js setlocal shiftwidth=2 softtabstop=2 tabstop=2
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Python settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " PEP8 identation settings
-au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=119 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
+" au BufNewFile,BufRead *.py
+"     \ set tabstop=4 |
+"     \ set softtabstop=4 |
+"     \ set shiftwidth=4 |
+"     \ set textwidth=119 |
+"     \ set expandtab |
+"     \ set autoindent |
+"     \ set fileformat=unix
 
 " python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
+" py << EOF
+" import os
+" import sys
+" if 'VIRTUAL_ENV' in os.environ:
+"   project_base_dir = os.environ['VIRTUAL_ENV']
+"   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"   execfile(activate_this, dict(__file__=activate_this))
+" EOF
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Settings for  other lenguages that I use
+" => Settings for  other filetypes that I use
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType js setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
