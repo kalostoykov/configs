@@ -26,21 +26,23 @@
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
 command=$HOME/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME
-separator_block_width=10
 markup=none
+#full_text=〉
+#align=center
+##color=#666666
+#separator_block_width=4
+#separator=true
 
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM
-separator=false
+label=
 interval=30
 
 [memory]
-label=SWAP
+label=
 instance=swap
-separator=false
 interval=30
 
 # Disk usage
@@ -49,7 +51,8 @@ interval=30
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=HOME
+label=
+#DIR=/mnt/data
 interval=30
 
 # Network interface monitoring
@@ -65,7 +68,6 @@ interval=10
 #INTERFACE=wlp3s0
 label=wifi:
 interval=10
-separator=true
 
 #[bandwidth]
 #INTERFACE=eth0
@@ -76,9 +78,8 @@ separator=true
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=CPU
+label=
 interval=10
-min_width=CPU 100.00%
 
 [load_average]
 label=LOAD
@@ -87,8 +88,8 @@ interval=10
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery]
-label=⚡
+[battery2]
+markup=pango
 interval=30
 
 # Volume indicator
@@ -96,9 +97,9 @@ interval=30
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-#
+
 [volume]
-label=♪
+label=
 interval=once
 signal=10
 
@@ -106,4 +107,4 @@ signal=10
 #
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
-interval=5
+interval=1
