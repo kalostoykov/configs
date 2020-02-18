@@ -1,0 +1,21 @@
+# Example aliases
+#alias zshconfig="vim ~/.zshrc"
+#alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# Utils
+alias lt='du -sh * | sort -h'
+alias gh='history|grep'
+
+# TMUX
+alias startgeneral="tmuxinator start general -n general"
+alias startoc="tmuxinator start oc -n oc"
+
+# PGADMIN
+alias startpgadmin4="docker run -p 9000:80 -v /home/kaloyanstoykov/utils_in_docker/pgadmin4:/var/lib/pgadmin -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' -d dpage/pgadmin4"
+
+# JAVA
+alias runjava8="docker run --rm -it -v $(pwd):/app openjdk:8-jdk-alpine /bin/sh"
+
+# HELM
+alias runhelm2-13-1="docker run --rm -it -v $(pwd):/chart -v
+~/.kube/config:/root/.kube/config -v ~/.helm:/root/.helm alpine/helm:2.13.1"
