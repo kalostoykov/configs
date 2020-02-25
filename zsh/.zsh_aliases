@@ -10,6 +10,37 @@ alias gh='history|grep'
 alias startgeneral="tmuxinator start general -n general"
 alias startoc="tmuxinator start oc -n oc"
 
+# DOCKER
+alias dk='docker'
+alias dkpsa='docker ps -a'
+alias dkl='docker logs'
+alias dklf='docker logs -f'
+alias dki='docker images'
+
+# KUBECTL
+alias k='kubectl'
+alias kex='kubectl exec -i -t'
+alias kpf='kubectl port-forward'
+alias kg='kubectl get'
+alias kd='kubectl describe'
+alias kgpo='kubectl get pods'
+alias kdpo='kubectl describe pods'
+alias kgno='kubectl get nodes'
+alias kdno='kubectl describe nodes'
+alias kgns='kubectl get namespaces'
+alias kdns='kubectl describe namespaces'
+alias krmns='kubectl delete namespaces'
+alias kgoyaml='kubectl get -o=yaml'
+alias kgpooyaml='kubectl get pods -o=yaml'
+alias kgdepoyaml='kubectl get deployment -o=yaml'
+alias kgsvcoyaml='kubectl get service -o=yaml'
+alias kgingoyaml='kubectl get ingress -o=yaml'
+alias kgcmoyaml='kubectl get configmap -o=yaml'
+alias kgsecoyaml='kubectl get secret -o=yaml'
+alias ksysgsecoyaml='kubectl --namespace=kube-system get secret -o=yaml'
+alias kgnooyaml='kubectl get nodes -o=yaml'
+alias kgowide='kubectl get -o=wide'
+
 # PGADMIN
 alias startpgadmin4="docker run -p 9000:80 -v ~/utils_in_docker/pgadmin4:/var/lib/pgadmin -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' -d dpage/pgadmin4"
 
@@ -17,5 +48,4 @@ alias startpgadmin4="docker run -p 9000:80 -v ~/utils_in_docker/pgadmin4:/var/li
 alias runjava8="docker run --rm -it -v $(pwd):/app openjdk:8-jdk-alpine /bin/sh"
 
 # HELM
-alias runhelm2-13-1="docker run --rm -it -v $(pwd):/chart -v
-~/.kube/config:/root/.kube/config -v ~/.helm:/root/.helm alpine/helm:2.13.1"
+alias runhelm2-13-1="docker run --rm -it -v $(pwd):/apps -v ~/.kube/config:/root/.kube/config -v ~/.helm:/root/.helm alpine/helm:2.13.1"
