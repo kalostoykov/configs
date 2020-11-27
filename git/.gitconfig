@@ -14,3 +14,28 @@
     plom = pull origin master
     ploh = pull origin HEAD
     unstage = reset --soft HEAD^
+[core]
+	autocrlf = input
+	quotepath = false
+[credential]
+	helper = cache --timeout=57600
+[branch]
+	autosetuprebase = always
+[color]
+	ui = true
+	status = auto
+	branch = auto
+[push]
+	default = simple
+	followTags = true
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[http]
+	sslVerify = false
+[ssl]
+	Verify = false
+[init]
+	defaultBranch = main
